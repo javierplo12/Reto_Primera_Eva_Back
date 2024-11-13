@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Inicializacion de datos
 PeliculaController.InicializarDatos();
 
 var app = builder.Build();
