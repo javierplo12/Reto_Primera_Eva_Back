@@ -13,7 +13,7 @@ namespace Models
             EstaOcupada = estaOcupada;
         }
 
-        public override void MostrarDetalles()
+        public void MostrarDetalles()
         {
             Console.WriteLine($"Butaca: {Fila}-{Numero}, Ocupada: {EstaOcupada}");
         }

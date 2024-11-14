@@ -11,8 +11,5 @@ public abstract class ElementoCine {
         Id = id;
         Nombre = nombre;
     }
-    
-
-    public abstract void MostrarDetalles();
 }
 

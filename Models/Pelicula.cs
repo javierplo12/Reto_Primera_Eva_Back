@@ -18,7 +18,7 @@ public class Pelicula : ElementoCine
         Genero = genero;
     }
 
-    public override void MostrarDetalles()
+    public void MostrarDetalles()
     {
         Console.WriteLine($"Pelicula: {Nombre}, Director: {Director}, Sinopsis: {Sinopsis}, Duración: {Duracion} minutos, Fecha Estreno: {FechaEstreno}, Género: {Genero}");
     }
