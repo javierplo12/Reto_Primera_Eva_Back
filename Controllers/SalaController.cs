@@ -99,17 +99,5 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
-        // Obtiene si una sala es VIP
-        [HttpGet("{id}/esvip")]
-        public IActionResult EsSalaVip(int id)
-        {
-            var sala = salas.FirstOrDefault(s => s.Id == id);
-            if (sala == null)
-            {
-                return NotFound("Sala no encontrada.");
-            }
-
-            return Ok(new { SalaId = sala.Id, EsVip = sala.EsVip });
-        }
     }
 }
