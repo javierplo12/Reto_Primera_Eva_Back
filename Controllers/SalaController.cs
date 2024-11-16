@@ -18,12 +18,16 @@ namespace Reto_Primera_Eva.Controllers
 
         public static void InicializarSalas()
         {
-            salas.Add(new Sala(1, ""));
-            salas.Add(new Sala(2, ""));
-            salas.Add(new Sala(3, ""));
-            salas.Add(new Sala(4, ""));
-            salas.Add(new Sala(5, "", esVip: true));
+            if (!salas.Any())
+            {
+                salas.Add(new Sala(1, ""));
+                salas.Add(new Sala(2, ""));
+                salas.Add(new Sala(3, ""));
+                salas.Add(new Sala(4, ""));
+                salas.Add(new Sala(5, "", esVip: true));
+            }
         }
+
 
         // Obtiene todas las salas
         [HttpGet]

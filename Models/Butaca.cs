@@ -14,11 +14,6 @@ namespace Models
             Numero = numero;
             EstaOcupada = estaOcupada;
         }
-
-        public void MostrarDetalles()
-        {
-            Console.WriteLine($"Butaca: {Fila}-{Numero}, Ocupada: {EstaOcupada}");
-        }
     }
 }
 

@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 //Inicializacion de datos
 PeliculaController.InicializarDatos();
 ButacaController.InicializarButacas();
+SalaController.InicializarSalas();
 
 var app = builder.Build();
 
