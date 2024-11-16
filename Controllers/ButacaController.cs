@@ -20,8 +20,10 @@ namespace Reto_Primera_Eva.Controllers
 
         public static void InicializarButacas()
         {
-            int numeroButacas = 125;
-            int filas = 7; 
+            butacas.Clear(); 
+
+            int numeroButacas = 119;
+            int filas = 7;
             int butacasPorFila = numeroButacas / filas;
 
             int id = 1;
@@ -33,6 +35,7 @@ namespace Reto_Primera_Eva.Controllers
                 }
             }
         }
+
 
         [HttpGet]
         public ActionResult<IEnumerable<Butaca>> GetButacas()
@@ -49,38 +52,6 @@ namespace Reto_Primera_Eva.Controllers
                 return NotFound();
             }
             return Ok(butaca);
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult OcuparButaca(int id)
-        {
-            var butaca = butacas.Find(b => b.Id == id);
-            if (butaca == null)
-            {
-                return NotFound();
-            }
-            if (butaca.EstaOcupada)
-            {
-                return BadRequest("La butaca ya está ocupada.");
-            }
-            butaca.EstaOcupada = true;
-            return NoContent();
-        }
-
-        [HttpPut("liberar/{id}")]
-        public IActionResult LiberarButaca(int id)
-        {
-            var butaca = butacas.Find(b => b.Id == id);
-            if (butaca == null)
-            {
-                return NotFound();
-            }
-            if (!butaca.EstaOcupada)
-            {
-                return BadRequest("La butaca ya está libre.");
-            }
-            butaca.EstaOcupada = false;
-            return NoContent();
         }
     }
 }
