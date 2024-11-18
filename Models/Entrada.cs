@@ -5,13 +5,10 @@ public class Entrada
     public int Id { get; set; }
     public int SalaId { get; set; } // Id de la sala asociada
     public Sala Sala { get; set; } // Propiedad de navegación
-
     public int PeliculaId { get; set; } // Id de la película asociada
-    public Pelicula Pelicula { get; set; } // Propiedad de navegación
-
+    public Pelicula Pelicula { get; set; } // Propiedad de navegación¡
     public int ButacaId { get; set; } // Id de la butaca asignada
     public Butaca Butaca { get; set; } // Propiedad de navegación
-
     public DateTime Fecha { get; set; } // Fecha y hora de la función
     public decimal Precio { get; set; } // Precio de la entrada
 

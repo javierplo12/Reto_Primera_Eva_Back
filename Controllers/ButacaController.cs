@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.Json;
 
 namespace Reto_Primera_Eva.Controllers
 {
@@ -18,12 +16,10 @@ namespace Reto_Primera_Eva.Controllers
             InicializarButacas();
         }
 
-        public static void InicializarButacas()
+         public static void InicializarButacas()
         {
-            butacas.Clear(); 
-
-            int numeroButacas = 119;
-            int filas = 7;
+            int numeroButacas = 125;
+            int filas = 7; 
             int butacasPorFila = numeroButacas / filas;
 
             int id = 1;
@@ -35,21 +31,21 @@ namespace Reto_Primera_Eva.Controllers
                 }
             }
         }
-
-
+        // Obtiene todas las butacas
         [HttpGet]
         public ActionResult<IEnumerable<Butaca>> GetButacas()
         {
             return Ok(butacas);
         }
 
+        // Obtiene una butaca por su ID
         [HttpGet("{id}")]
         public ActionResult<Butaca> GetButaca(int id)
         {
             var butaca = butacas.Find(b => b.Id == id);
             if (butaca == null)
             {
-                return NotFound();
+                return NotFound("Butaca no encontrada.");
             }
             return Ok(butaca);
         }

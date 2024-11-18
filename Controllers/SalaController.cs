@@ -9,7 +9,7 @@ namespace Reto_Primera_Eva.Controllers
     [ApiController]
     public class SalaController : ControllerBase
     {
-        private static List<Sala> salas = new List<Sala>();
+        public static List<Sala> salas = new List<Sala>();
 
         static SalaController()
         {
