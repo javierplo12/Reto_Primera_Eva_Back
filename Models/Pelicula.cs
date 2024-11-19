@@ -9,8 +9,9 @@ public class Pelicula
     public double Duracion {get; set;} 
     public DateTime FechaEstreno {get; set;}
     public string Genero {get; set;}
+    public string Imagen {get; set;}
 
-    public Pelicula(int id, string nombre, string director, string sinopsis, double duracion, DateTime fechaestreno, string genero) 
+    public Pelicula(int id, string nombre, string director, string sinopsis, double duracion, DateTime fechaestreno, string genero, string imagen) 
     {
         Id = id;
         Nombre = nombre;
@@ -19,5 +20,6 @@ public class Pelicula
         Duracion = duracion;
         FechaEstreno = fechaestreno;
         Genero = genero;
+        Imagen = imagen;
     }
 }
