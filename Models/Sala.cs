@@ -6,14 +6,11 @@ namespace Models
         public string Nombre { get; set; }
         public bool EsVip { get; set; }
 
-        public ICollection<Butaca> Butacas { get; set; } 
-
         public Sala(int id, string nombre, bool esVip = false)
         {
             Id = id;
             Nombre = nombre;
             EsVip = esVip;
-            Butacas = new List<Butaca>(); 
         }
 
         public string NombreFinal => EsVip ? "Sala Deluxe" : $"Sala {Id}";

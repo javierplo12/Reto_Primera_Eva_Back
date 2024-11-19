@@ -22,9 +22,9 @@ namespace Reto_Primera_Eva.Controllers
         {
             if (!pagos.Any())
             {
-                pagos.Add(new Pago(1, 50.00m, "Tarjeta", DateTime.Now, "Completado"));
-                pagos.Add(new Pago(2, 30.00m, "Efectivo", DateTime.Now.AddHours(-1), "Pendiente"));
-                pagos.Add(new Pago(3, 100.00m, "Tarjeta", DateTime.Now.AddDays(-1), "Cancelado"));
+                pagos.Add(new Pago(1, 5, "Tarjeta", DateTime.Now, "Completado"));
+                pagos.Add(new Pago(2, 5, "Efectivo", DateTime.Now, "Pendiente"));
+                pagos.Add(new Pago(3, 5, "Tarjeta", DateTime.Now, "Cancelado"));
             }
         }
 
@@ -68,12 +68,11 @@ namespace Reto_Primera_Eva.Controllers
         [HttpPost]
         public ActionResult CrearPago(Pago nuevoPago)
         {
-            if (pagos.Any(p => p.Id == nuevoPago.Id))
-            {
-                return BadRequest("Ya existe un pago con el mismo ID.");
-            }
+            var nuevoId = pagos.Any() ? pagos.Max(p => p.Id) + 1 : 1;
+            nuevoPago.Id = nuevoId;
 
             pagos.Add(nuevoPago);
+
             return CreatedAtAction(nameof(GetPago), new { id = nuevoPago.Id }, nuevoPago);
         }
 
@@ -92,20 +91,6 @@ namespace Reto_Primera_Eva.Controllers
             pago.FechaPago = pagoActualizado.FechaPago;
             pago.Estado = pagoActualizado.Estado;
 
-            return NoContent();
-        }
-
-        // Elimina un pago por su ID
-        [HttpDelete("{id}")]
-        public IActionResult EliminarPago(int id)
-        {
-            var pago = pagos.FirstOrDefault(p => p.Id == id);
-            if (pago == null)
-            {
-                return NotFound("Pago no encontrado.");
-            }
-
-            pagos.Remove(pago);
             return NoContent();
         }
     }

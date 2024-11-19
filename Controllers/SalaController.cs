@@ -102,6 +102,5 @@ namespace Reto_Primera_Eva.Controllers
             salas.Remove(sala);
             return NoContent();
         }
-
     }
 }

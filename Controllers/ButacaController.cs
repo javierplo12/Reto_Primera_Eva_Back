@@ -18,7 +18,7 @@ namespace Reto_Primera_Eva.Controllers
 
          public static void InicializarButacas()
         {
-            int numeroButacas = 125;
+            int numeroButacas = 119;
             int filas = 7; 
             int butacasPorFila = numeroButacas / filas;
 
