@@ -21,7 +21,7 @@ namespace Reto_Primera_Eva.Controllers
             if (!funcion.Any())
             {
                 // Sala 1
-                funcion.Add(new Funcion(1, "Sala 1", "1/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(1, "Sala 1", "1/12", DateTime.Today.AddHours(10).AddMinutes(0)));
                 funcion.Add(new Funcion(2, "Sala 1", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(3, "Sala 1", "1/12", DateTime.Parse("14:15")));
                 funcion.Add(new Funcion(4, "Sala 1", "1/12", DateTime.Parse("16:30")));
@@ -201,5 +201,20 @@ namespace Reto_Primera_Eva.Controllers
             funcion.Remove(funcionExistente);
             return NoContent();
         }
+
+        [HttpGet("{id}/butacas")]
+        public ActionResult<IEnumerable<string>> GetButacasByFuncionId(int id)
+        {
+            var funcionExistente = funcion.FirstOrDefault(f => f.Id == id);
+
+            if (funcionExistente == null)
+            {
+                return NotFound("Función no encontrada.");
+            }
+
+            return Ok(funcionExistente.Butacas);
+        }
+
+
     }
 }
