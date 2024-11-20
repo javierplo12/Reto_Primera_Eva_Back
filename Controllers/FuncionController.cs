@@ -56,6 +56,81 @@ namespace Reto_Primera_Eva.Controllers
                 funcion.Add(new Funcion(25, "Sala 5", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(26, "Sala 5", "1/12", DateTime.Parse("14:15")));
                 funcion.Add(new Funcion(27, "Sala 5", "1/12", DateTime.Parse("18:30")));
+
+                // Sala 1 - Día 2
+                funcion.Add(new Funcion(28, "Sala 1", "2/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(29, "Sala 1", "2/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(30, "Sala 1", "2/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(31, "Sala 1", "2/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(32, "Sala 1", "2/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(33, "Sala 1", "2/12", DateTime.Parse("20:45")));
+
+                // Sala 2 - Día 2
+                funcion.Add(new Funcion(34, "Sala 2", "2/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(35, "Sala 2", "2/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(36, "Sala 2", "2/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(37, "Sala 2", "2/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(38, "Sala 2", "2/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(39, "Sala 2", "2/12", DateTime.Parse("20:45")));
+
+                // Sala 3 - Día 2
+                funcion.Add(new Funcion(40, "Sala 3", "2/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(41, "Sala 3", "2/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(42, "Sala 3", "2/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(43, "Sala 3", "2/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(44, "Sala 3", "2/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(45, "Sala 3", "2/12", DateTime.Parse("20:45")));
+
+                // Sala 4 - Día 2
+                funcion.Add(new Funcion(46, "Sala 4", "2/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(47, "Sala 4", "2/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(48, "Sala 4", "2/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(49, "Sala 4", "2/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(50, "Sala 4", "2/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(51, "Sala 4", "2/12", DateTime.Parse("20:45")));
+
+                // Sala 5 - Día 2
+                funcion.Add(new Funcion(52, "Sala 5", "2/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(53, "Sala 5", "2/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(54, "Sala 5", "2/12", DateTime.Parse("18:30")));
+
+                // Sala 1 - Día 3
+                funcion.Add(new Funcion(55, "Sala 1", "3/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(56, "Sala 1", "3/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(57, "Sala 1", "3/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(58, "Sala 1", "3/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(59, "Sala 1", "3/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(60, "Sala 1", "3/12", DateTime.Parse("20:45")));
+
+                // Sala 2 - Día 3
+                funcion.Add(new Funcion(61, "Sala 2", "3/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(62, "Sala 2", "3/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(63, "Sala 2", "3/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(64, "Sala 2", "3/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(65, "Sala 2", "3/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(66, "Sala 2", "3/12", DateTime.Parse("20:45")));
+
+                // Sala 3 - Día 3
+                funcion.Add(new Funcion(67, "Sala 3", "3/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(68, "Sala 3", "3/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(69, "Sala 3", "3/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(70, "Sala 3", "3/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(71, "Sala 3", "3/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(72, "Sala 3", "3/12", DateTime.Parse("20:45")));
+
+                // Sala 4 - Día 3
+                funcion.Add(new Funcion(73, "Sala 4", "3/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(74, "Sala 4", "3/12", DateTime.Parse("12:15")));
+                funcion.Add(new Funcion(75, "Sala 4", "3/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(76, "Sala 4", "3/12", DateTime.Parse("16:30")));
+                funcion.Add(new Funcion(77, "Sala 4", "3/12", DateTime.Parse("18:30")));
+                funcion.Add(new Funcion(78, "Sala 4", "3/12", DateTime.Parse("20:45")));
+
+                // Sala 5 - Día 3
+                funcion.Add(new Funcion(79, "Sala 5", "3/12", DateTime.Parse("10:00")));
+                funcion.Add(new Funcion(80, "Sala 5", "3/12", DateTime.Parse("14:15")));
+                funcion.Add(new Funcion(81, "Sala 5", "3/12", DateTime.Parse("18:30")));
+
             }
         }
 
@@ -89,7 +164,7 @@ namespace Reto_Primera_Eva.Controllers
                 return BadRequest("La función no puede ser nula.");
             }
 
-            nuevaFuncion.Id = funcion.Any() ? funcion.Max(f => f.Id) + 1 : 1; 
+            nuevaFuncion.Id = funcion.Any() ? funcion.Max(f => f.Id) + 1 : 1;
             funcion.Add(nuevaFuncion);
             return CreatedAtAction(nameof(GetFuncionById), new { id = nuevaFuncion.Id }, nuevaFuncion);
         }
