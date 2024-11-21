@@ -19,7 +19,7 @@ namespace Models
             Butacas = GenerarButacas();
         }
 
-        private List<string> GenerarButacas()
+        public List<string> GenerarButacas()
         {
             List<string> butacas = new List<string>();
             char[] filas = { '1', '2', '3', '4', '5', '6', '7' };
