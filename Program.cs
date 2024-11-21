@@ -22,7 +22,6 @@ builder.Services.AddSwaggerGen();
 
 // Inicialización de datos
 PeliculaController.InicializarDatos();
-ButacaController.InicializarButacas();
 FuncionController.InicializarFunciones();
 EntradaController.InicializarDatos();
 
