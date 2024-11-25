@@ -11,12 +11,14 @@ namespace Reto_Primera_Eva.Controllers
     {
         private static List<Entrada> entradas = new List<Entrada>();
 
+        // Método para obtener los datos de todas las entradas
         [HttpGet]
         public ActionResult<IEnumerable<Entrada>> GetEntradas()
         {
             return Ok(entradas);
         }
 
+        // Método para obtener los datos de una entrada por su id
         [HttpGet("{id}")]
         public ActionResult<Entrada> GetEntrada(int id)
         {
@@ -28,6 +30,7 @@ namespace Reto_Primera_Eva.Controllers
             return Ok(entrada);
         }
 
+        // Método para crear una nueva entrada
         [HttpPost]
         public ActionResult<Entrada> CreateEntrada(Entrada entrada)
         {
@@ -35,6 +38,7 @@ namespace Reto_Primera_Eva.Controllers
             return CreatedAtAction(nameof(GetEntrada), new { id = entrada.Id }, entrada);
         }
 
+        // Método para actualizar datos de una entrada por id
         [HttpPut("{id}")]
         public IActionResult UpdateEntrada(int id, Entrada updatedEntrada)
         {
@@ -50,6 +54,7 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
+        // Método para borrar una entrada por id
         [HttpDelete("{id}")]
         public IActionResult DeleteEntrada(int id)
         {
@@ -62,7 +67,7 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
-        // Método para inicializar datos de ejemplo
+        // Método para inicializar datos
         public static void InicializarDatos()
         {
             entradas.Add(new Entrada(1, new DateTime(2024, 11, 20, 18, 30, 0), 5));

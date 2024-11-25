@@ -13,12 +13,14 @@ namespace Reto_Primera_Eva.Controllers
     {
         private static List<Pelicula> peliculas = new List<Pelicula>();
 
+        // Método para obtener los datos de todas las peliculas
         [HttpGet]
         public ActionResult<IEnumerable<Pelicula>> GetPeliculas()
         {
             return Ok(peliculas);
         }
 
+        // Método para obtener los datos de una pelicula por su id
         [HttpGet("{id}")]
         public ActionResult<Pelicula> GetPelicula(int id)
         {
@@ -30,6 +32,7 @@ namespace Reto_Primera_Eva.Controllers
             return Ok(pelicula);
         }
 
+        // Método para crear una nueva pelicula
         [HttpPost]
         public ActionResult<Pelicula> CreatePelicula(Pelicula pelicula)
         {
@@ -37,6 +40,7 @@ namespace Reto_Primera_Eva.Controllers
             return CreatedAtAction(nameof(GetPelicula), new { id = pelicula.Id }, pelicula);
         }
 
+        // Método para actualizar datos de una pelicula por id
         [HttpPut("{id}")]
         public IActionResult UpdatePelicula(int id, Pelicula updatedPelicula)
         {
@@ -55,6 +59,7 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
+        // Método para borrar una película por id
         [HttpDelete("{id}")]
         public IActionResult DeletePelicula(int id)
         {

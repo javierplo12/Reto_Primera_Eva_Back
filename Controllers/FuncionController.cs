@@ -16,11 +16,12 @@ namespace Reto_Primera_Eva.Controllers
             InicializarFunciones();
         }
 
+        // Funcion para crear todas las funciones
         public static void InicializarFunciones()
         {
             if (!funcion.Any())
             {
-                // Sala 1
+                // Sala 1 - Día 1
                 funcion.Add(new Funcion(1, "Sala 1", "1/12", DateTime.Today.AddHours(10).AddMinutes(0)));
                 funcion.Add(new Funcion(2, "Sala 1", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(3, "Sala 1", "1/12", DateTime.Parse("14:15")));
@@ -28,7 +29,7 @@ namespace Reto_Primera_Eva.Controllers
                 funcion.Add(new Funcion(5, "Sala 1", "1/12", DateTime.Parse("18:30")));
                 funcion.Add(new Funcion(6, "Sala 1", "1/12", DateTime.Parse("20:45")));
 
-                // Sala 2
+                // Sala 2 - Día 1
                 funcion.Add(new Funcion(7, "Sala 2", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(8, "Sala 2", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(9, "Sala 2", "1/12", DateTime.Parse("14:15")));
@@ -36,7 +37,7 @@ namespace Reto_Primera_Eva.Controllers
                 funcion.Add(new Funcion(11, "Sala 2", "1/12", DateTime.Parse("18:30")));
                 funcion.Add(new Funcion(12, "Sala 2", "1/12", DateTime.Parse("20:45")));
 
-                // Sala 3
+                // Sala 3 - Día 1
                 funcion.Add(new Funcion(13, "Sala 3", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(14, "Sala 3", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(15, "Sala 3", "1/12", DateTime.Parse("14:15")));
@@ -44,7 +45,7 @@ namespace Reto_Primera_Eva.Controllers
                 funcion.Add(new Funcion(17, "Sala 3", "1/12", DateTime.Parse("18:30")));
                 funcion.Add(new Funcion(18, "Sala 3", "1/12", DateTime.Parse("20:45")));
 
-                // Sala 4
+                // Sala 4 - Día 1
                 funcion.Add(new Funcion(19, "Sala 4", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(20, "Sala 4", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(21, "Sala 4", "1/12", DateTime.Parse("14:15")));
@@ -52,7 +53,7 @@ namespace Reto_Primera_Eva.Controllers
                 funcion.Add(new Funcion(23, "Sala 4", "1/12", DateTime.Parse("18:30")));
                 funcion.Add(new Funcion(24, "Sala 4", "1/12", DateTime.Parse("20:45")));
 
-                // Sala 5
+                // Sala 5 - Día 1
                 funcion.Add(new Funcion(25, "Sala 5", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(26, "Sala 5", "1/12", DateTime.Parse("14:15")));
                 funcion.Add(new Funcion(27, "Sala 5", "1/12", DateTime.Parse("18:30")));
@@ -202,6 +203,7 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
+        // Método para obtener las butacas por id de funcion
         [HttpGet("{id}/butacas")]
         public ActionResult<IEnumerable<string>> GetButacasByFuncionId(int id)
         {
