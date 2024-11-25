@@ -66,9 +66,6 @@ namespace Reto_Primera_Eva.Controllers
         public static void InicializarDatos()
         {
             entradas.Add(new Entrada(1, new DateTime(2024, 11, 20, 18, 30, 0), 5));
-            entradas.Add(new Entrada(2, new DateTime(2024, 11, 20, 21, 0, 0), 5));
-            entradas.Add(new Entrada(3, new DateTime(2024, 11, 21, 19, 30, 0), 5));
-            entradas.Add(new Entrada(4, new DateTime(2024, 11, 21, 22, 0, 0), 5));
         }
     }
 }
