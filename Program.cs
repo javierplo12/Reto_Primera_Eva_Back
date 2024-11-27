@@ -23,7 +23,6 @@ builder.Services.AddSwaggerGen();
 // Inicialización de datos
 PeliculaController.InicializarDatos();
 FuncionController.InicializarFunciones();
-EntradaController.InicializarDatos();
 
 var app = builder.Build();
 

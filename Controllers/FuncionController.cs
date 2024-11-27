@@ -203,20 +203,6 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
-        // Método para obtener las butacas por id de funcion
-        [HttpGet("{id}/butacas")]
-        public ActionResult<IEnumerable<string>> GetButacasByFuncionId(int id)
-        {
-            var funcionExistente = funcion.FirstOrDefault(f => f.Id == id);
-
-            if (funcionExistente == null)
-            {
-                return NotFound("Función no encontrada.");
-            }
-
-            return Ok(funcionExistente.Butacas);
-        }
-
 
     }
 }
