@@ -1,0 +1,12 @@
+# Ignorar carpetas generadas por el compilador
+bin/
+obj/
+
+# Ignorar archivos temporales de usuario
+*.cache
+*.user
+*.log
+
+# Ignorar configuraciones locales de editor/IDE
+.vscode/
+*.editorconfig
