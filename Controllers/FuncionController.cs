@@ -22,7 +22,7 @@ namespace Reto_Primera_Eva.Controllers
             if (!funcion.Any())
             {
                 // Sala 1 - Día 1
-                funcion.Add(new Funcion(1, "Sala 1", "1/12", DateTime.Today.AddHours(10).AddMinutes(0)));
+                funcion.Add(new Funcion(1, "Sala 1", "1/12", DateTime.Parse("10:00")));
                 funcion.Add(new Funcion(2, "Sala 1", "1/12", DateTime.Parse("12:15")));
                 funcion.Add(new Funcion(3, "Sala 1", "1/12", DateTime.Parse("14:15")));
                 funcion.Add(new Funcion(4, "Sala 1", "1/12", DateTime.Parse("16:30")));
@@ -155,6 +155,7 @@ namespace Reto_Primera_Eva.Controllers
 
             return Ok(funcionExistente);
         }
+
 
         // Añade una nueva función
         [HttpPost]
