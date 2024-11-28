@@ -4,7 +4,7 @@ namespace Models
     {
         public int Id { get; set; }
         public string Sala { get; set; }
-        public List<string> Butacas { get; set; }
+        public List<Butaca> Butacas { get; set; } 
         public string Dia { get; set; }
         public DateTime Hora { get; set; }
 
@@ -19,21 +19,20 @@ namespace Models
             Butacas = GenerarButacas();
         }
 
-        public List<string> GenerarButacas()
+        public List<Butaca> GenerarButacas()
         {
-            List<string> butacas = new List<string>();
+            List<Butaca> butacas = new List<Butaca>();
             char[] filas = { '1', '2', '3', '4', '5', '6', '7' };
 
             foreach (var fila in filas)
             {
                 for (int asiento = 1; asiento <= 17; asiento++)
                 {
-                    butacas.Add($"{fila}-{asiento}");
+                    butacas.Add(new Butaca($"{fila}-{asiento}"));
                 }
             }
 
             return butacas;
         }
-
     }
 }
