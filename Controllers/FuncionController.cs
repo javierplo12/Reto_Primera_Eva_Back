@@ -190,30 +190,37 @@ namespace Reto_Primera_Eva.Controllers
         }
 
         [HttpPut("{id}/butacas")]
-public IActionResult ActualizarButacasOcupadas(int id, [FromBody] List<string> butacasSeleccionadas)
-{
-    // Busca la función correspondiente
-    var funcion = _context.Funciones.FirstOrDefault(f => f.Id == id);
-    if (funcion == null)
-    {
-        return NotFound(new { mensaje = "Función no encontrada" });
-    }
-
-    // Marca las butacas seleccionadas como ocupadas
-    foreach (var nombreButaca in butacasSeleccionadas)
-    {
-        var butaca = funcion.Butacas.FirstOrDefault(b => b.Nombre == nombreButaca);
-        if (butaca != null)
+        public ActionResult ActualizarButacas(int id, [FromBody] List<Butaca> butacasActualizadas)
         {
-            butaca.EstaOcupada = true;
+            // Busca la función con el ID especificado
+            var funcionExistente = funcion.FirstOrDefault(f => f.Id == id);
+
+            if (funcionExistente == null)
+            {
+                return NotFound("Función no encontrada.");
+            }
+
+            // Recorre las butacas enviadas en el cuerpo de la solicitud
+            foreach (var butacaActualizada in butacasActualizadas)
+            {
+                // Busca la butaca por su nombre en la función existente
+                var butacaExistente = funcionExistente.Butacas.FirstOrDefault(b => b.Nombre == butacaActualizada.Nombre);
+
+                if (butacaExistente != null)
+                {
+                    // Actualiza el estado de la butaca
+                    butacaExistente.EstaOcupada = butacaActualizada.EstaOcupada;
+                }
+                else
+                {
+                    // Si la butaca no existe, devuelve un error
+                    return BadRequest($"La butaca '{butacaActualizada.Nombre}' no existe en la función.");
+                }
+            }
+
+            return Ok(new { mensaje = "Estados de butacas actualizados correctamente." });
         }
-    }
 
-    // Guarda los cambios en la base de datos
-    _context.SaveChanges();
-
-    return Ok(new { mensaje = "Estado de las butacas actualizado correctamente" });
-}
 
 
         // Elimina una función existente por ID
