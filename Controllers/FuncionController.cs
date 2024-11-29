@@ -189,6 +189,33 @@ namespace Reto_Primera_Eva.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}/butacas")]
+public IActionResult ActualizarButacasOcupadas(int id, [FromBody] List<string> butacasSeleccionadas)
+{
+    // Busca la función correspondiente
+    var funcion = _context.Funciones.FirstOrDefault(f => f.Id == id);
+    if (funcion == null)
+    {
+        return NotFound(new { mensaje = "Función no encontrada" });
+    }
+
+    // Marca las butacas seleccionadas como ocupadas
+    foreach (var nombreButaca in butacasSeleccionadas)
+    {
+        var butaca = funcion.Butacas.FirstOrDefault(b => b.Nombre == nombreButaca);
+        if (butaca != null)
+        {
+            butaca.EstaOcupada = true;
+        }
+    }
+
+    // Guarda los cambios en la base de datos
+    _context.SaveChanges();
+
+    return Ok(new { mensaje = "Estado de las butacas actualizado correctamente" });
+}
+
+
         // Elimina una función existente por ID
         [HttpDelete("{id}")]
         public ActionResult DeleteFuncion(int id)
