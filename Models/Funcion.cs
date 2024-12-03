@@ -28,7 +28,7 @@ namespace Models
             {
                 for (int asiento = 1; asiento <= 17; asiento++)
                 {
-                    butacas.Add(new Butaca($"{fila}-{asiento}"));
+                    butacas.Add(new Butaca($"Fila {fila} - Asiento {asiento}"));
                 }
             }
 
