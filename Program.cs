@@ -25,6 +25,7 @@ builder.Services.AddSwaggerGen();
 // Inicialización de datos
 PeliculaController.InicializarDatos();
 FuncionController.InicializarFunciones();
+OpinionesPelisController.InicializarOpiniones();
 
 var app = builder.Build();
 
