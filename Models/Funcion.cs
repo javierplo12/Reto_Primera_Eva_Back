@@ -7,22 +7,23 @@ namespace Models
         public List<Butaca> Butacas { get; set; } 
         public string Dia { get; set; }
         public DateTime Hora { get; set; }
-
+        public int IdPelicula { get; set; }
         public string HoraFormatted => Hora.ToString("HH:mm");
 
-        public Funcion(int id, string sala, string dia, DateTime hora)
+        public Funcion(int id, string sala, string dia, DateTime hora, int idPelicula)
         {
             Id = id;
             Sala = sala;
             Dia = dia;
             Hora = hora;
+            IdPelicula = idPelicula;
             Butacas = GenerarButacas();
         }
 
         public List<Butaca> GenerarButacas()
         {
             List<Butaca> butacas = new List<Butaca>();
-            char[] filas = { '1', '2', '3', '4', '5', '6', '7' };
+            char[] filas = { '1', '2', '3', '4', '5', '6', '7'};
 
             foreach (var fila in filas)
             {
